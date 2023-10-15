@@ -1,0 +1,212 @@
+/*for header section we have linked index.css to taylorplaylist.html page*/
+
+/*---------------------------------Variables -------------------------------------*/
+:root{
+    --background-color:hsl(231.11deg 52.94% 10%);
+    --text-color:hsl(0deg 0% 100%);
+    --text-font:fangsong;
+    --p-text-color:hsl(232deg 10.64% 72.35%);
+}
+
+/*-----------------------------------Main Section ------------------------------*/
+
+#taylor-swift-section{
+    height: 50vh;
+    width: 100%;
+}
+
+.taylor-swift-container{
+    height: 45vh;
+    width: 95%;
+    margin: 20px 20px 20px 20px;
+    background-color: hsl(230.67deg 52.94% 16.67%);
+    display: flex;
+}
+
+.taylor-image{
+    height: 45vh;
+    width: 40%;
+}
+
+.taylor-image img{
+     height: 45vh;
+    width: 95%;
+}
+
+.taylor-description{
+       height: 45vh;
+    width: 60%;
+}
+
+.section-heading{
+    font-size: 30px ;
+    display: inline;
+
+}
+
+.h3-heading{
+    font-size: 15px;
+    color: var(--p-text-color);
+}
+
+.h2-heading {
+    font-size: 20px; 
+    margin-left: 10px; 
+    display: inline; 
+    margin-left: 200px;
+    font-family: var(--text-font);
+    color: var(--p-text-color);
+    
+}
+
+/*button*/
+
+.buttons> button {
+    border: 0px;
+    height: 3vw;
+    width: 10vw;
+    color: white;
+    font-size: 1.3vw;
+    cursor: pointer;
+
+}
+/* play button */
+#play-button{
+    background-image: linear-gradient(hsl(255.21deg 62.83% 44.31%), hsl(286.8deg 68.18% 56.86%));
+}
+
+/* follow button */
+#follow-button{
+    background-color: transparent;
+}
+
+#play-button:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px black;;
+}
+
+/*----------------------------------------- Song Section ---------------------------*/
+#song-section{
+     height: auto;
+    width: 100%;
+}
+
+.song-container{
+    width: 95%;
+    height: 20vh;
+    margin: 20px;
+    background-color: hsl(230.4deg 32.47% 15.1%);
+    display: flex;   
+    align-items: center;
+}
+
+.song-no{
+   margin: 30px 10px 30px 20px;
+}
+
+.song-img{
+    width: 150px;
+    height: 100px;
+     margin: 10px;
+}
+
+.song-name{
+    margin-top: 50px;
+    font-family: var(--text-font);
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+.album-name{
+   margin: 10px 0;
+    font-family: var(--text-font);
+    color: var(--p-text-color);
+    font-size: 15px;
+}
+
+.time-stamp{
+    font-family: var(--text-font);
+    color: var(--p-text-color);
+    font-size: 20px;
+    margin-right: 300px;
+}
+
+.song-icon{
+
+    margin: 20px;
+    color: var(--p-text-color);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.fa-heart:hover{
+    color: hotpink;
+    transform: scale(1.1);
+}
+
+.fa-plus:hover{
+    color: black;
+    transform: scale(1.2);
+
+}
+
+/*----------------------------- Similar Artist Section ----------------------------*/
+/*For recently played section we have applied same styles as queue section in index.css*/
+
+#similar-artist-section{
+    height: 50vh;
+    overflow: hidden;
+}
+
+.view-all{
+    font-family: var(--text-font);
+    color: var(--p-text-color);
+    font-size: 15px;
+    margin-left: 150px;
+    cursor: pointer;
+}
+
+.right-item {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-dots {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.hidden-checkbox {
+    display: none;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+     background-color: hsl(0deg 0% 94.9%);
+    border: 1px solid #ccc; /* Border for the dropdown */
+    z-index: 2;
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.options li {
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.options li:hover {
+    background-color: #f0f0f0; 
+}
+
+
+#dropdown:checked + .menu-dots + .dropdown {
+    display: block;
+}

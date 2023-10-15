@@ -1,0 +1,799 @@
+/*-----------------------------some default settings------------------------------*/
+body, html {
+    margin: 0px;
+    padding: 0;
+}
+
+/*-----------------------------------Variables-------------------------------------*/
+:root{
+    --background-color:hsl(231.11deg 52.94% 10%);
+    --text-color:hsl(0deg 0% 100%);
+    --text-font:fangsong;
+    --p-text-color:hsl(232deg 10.64% 72.35%);
+}
+
+/*---------------------------Common margin class-------------------------------------*/
+
+.mb40{
+    margin-left: 40px;
+}
+
+
+.mb4{
+    margin-right: 4px;
+}
+
+/*-----------------------------------Body Section-----------------------------------*/
+
+body {
+  
+    font-family: sans-serif;
+    font-size: 30px;
+    background-color:hsl(231.11deg 52.94% 10%);/*IE doesnt support variables hence writing like this too*/
+    background-color: var(--background-color);
+
+}
+
+#body-header {
+    height: 12vh;
+    padding-top: 1.2rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color); 
+    z-index: 2;
+    margin-bottom: 0;
+  
+}
+
+
+/*-----------------------------------Navigation Section-----------------------------------*/
+
+.nav-images{
+    height: 10vh;
+    width: 5vw;
+    margin: auto;
+    border-radius: 50%; 
+
+}
+
+.nav-images:hover{
+ box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+ transform: scale(1.1);
+
+}
+
+/* Horizontal Lists */
+
+.horizontal-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+  margin: 0;
+
+}
+
+.horizontal-list li {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-family: fangsong;
+  font-family: var(--text-font);
+
+}
+
+.nav-images {
+  max-width: 100%;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+
+.nav-menu li:nth-child(1) a {
+  order: -1;
+}
+
+.nav-menu li:nth-child(6) a {
+  order: 2;
+}
+
+.nav-menu li a {
+  color: whitesmoke;
+  color: var(--text-color);
+  transition: color 0.5s;
+  text-decoration: none;
+}
+
+.nav-menu li a:hover {
+  color: grey;
+  transition: color 0.5s;
+  transform: scale(1.2);
+
+}
+
+/*serach bar*/
+
+.search-bar {
+  width: 30%;
+  position: relative;
+  margin-right: -250px;
+
+}
+
+.search-bar input {
+  width: calc(100% - 60px);
+  height: 30px;
+  text-align: left;
+  border: none;
+  outline: none;
+  padding-left: 50px;
+  background-color: hsl(230.45deg 55% 15.69%);
+  border-radius: 8px;
+  color: #d3d9e0; 
+  font-size: 14px; 
+}
+
+.search-ico {
+  position: absolute;
+  left: 10px;
+  top:8px;
+  color: #d3d9e0;
+   font-size: 15px;
+}
+
+.fa-bell{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.microphone-ico {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  color: #d3d9e0;
+   font-size: 15px;
+}
+
+/*there will be two sections to the page main and aside*/
+main {
+    display: inline-block;
+    width: 70%;
+    height: 100vh;
+
+}
+
+aside {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(30% - 20px); 
+    position: fixed;
+    
+}
+
+/*--------------------------Common class for section headings----------------------*/
+.section-heading{
+     font-family: fangsong;
+    font-family: var(--text-font);
+    color: hsl(0deg 0% 100%);
+    color: var(--text-color);
+     font-size: 1.2rem;
+ 
+}
+
+.h3-heading{
+      font-family: fangsong;
+    font-family: var(--text-font);
+    color: hsl(0deg 0% 100%);
+    color: var(--text-color);
+     font-size: 1.5rem;
+}
+
+.p-text{
+      font-family: fangsong;
+    font-family: var(--text-font);
+    color: var(--p-text-color);
+     font-size: 1rem;
+}
+
+.dropdown-text{
+   font-family: fangsong;
+    font-family: var(--text-font);
+    color: hsl(0deg 0% 100%);
+    color: var(--text-color);
+     font-size: 1rem;
+     text-align: center;
+     margin-top: 45px;
+
+ }
+
+/*--------------------------------main section images carousel--------------------*/
+
+#main-image-section{
+    height: 35vh;
+    width:  100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img-carousel {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  overflow: visible;
+  justify-content: space-between;
+  max-height: 18vw;
+}
+
+.img-carousel img {
+  height: 15vw;
+  width: 25vw;
+  transition: all 1s ease-in-out;
+  margin: 10px;
+
+}
+
+/*this effect when the image is hovered the other two images opacity would decrease*/
+.img-carousel:hover img:not(:hover) {
+  opacity: 0.5;
+  transition: opacity 1s ease-in-out;
+}
+
+.img-carousel img:hover {
+  z-index: 4;
+  box-shadow: 0px 0px 12px 0.1px black;
+  height: 16vw;
+  width: 27vw;
+}
+
+/*----------------------Latest Release Section-----------------------------------*/
+
+#latest-release{
+    height: 40vh;
+    width: 100%;
+}
+
+
+.song-img{
+    display: inline-flex;
+     height: 92%;
+     width: 40%;
+     vertical-align: top; 
+}
+
+.song-img-size{
+    height: 90px;
+    width: 150px;
+}
+
+.song-name {
+  display: inline-block;
+  height: 92%;
+  width: 45%;
+  vertical-align: top;
+  margin-left: 10px;
+
+}
+
+
+.latest-release-container{
+    display: inline-flex;
+    height: 45%;
+    width: 45%;
+}
+
+   
+
+/*dropdown */
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.three-dots {
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: hsl(0deg 0% 94.9%); /* Background color for the dropdown */
+    border: 1px solid #ccc;
+    width: 180px; /* Adjust the width as needed */
+    padding: 10px;
+    text-align: left;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+hr{
+    margin: 0px;
+    padding: 0px;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown li {
+    display: flex; /* Display icon and text on the same line */
+    align-items: center; /* Vertically align items */
+    margin-bottom: 5px;
+}
+
+.dropdown i {
+    margin-right: 10px; /* Add spacing between icon and text */
+    font-size: 20px;
+    color: hsl(230.4deg 27.47% 17.84%);
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: hsl(230.4deg 27.47% 17.84%);
+    font-family: var(--text-font);
+    font-size: 20px;
+}
+
+.dropdown a:hover {
+    color: black;
+}
+
+.dropdown-container:hover .dropdown {
+    display: block;
+    z-index: 1;
+}
+
+.dropdown-container:hover .dropdown-text {
+    display: none;
+}
+
+.dropdown-text {
+    margin-top: 10px;
+    text-align: center;
+    transition: color 0.5s; /* Smooth transition for color change */
+}
+
+
+/*play button*/
+.images {
+    position: relative;
+    overflow: hidden;
+     cursor: pointer;
+}
+
+.images img {
+    transition: opacity 0.2s ease-in;
+}
+
+.images:hover img {
+    opacity: 0.7; /* Decrease opacity of the image on hover */
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+.images:hover .play-button {
+    opacity: 5; /* Increase opacity of the play button on hover */
+    z-index: 1;
+}
+
+.play-button::before {
+    content: "\f04b"; /* FontAwesome play icon */
+    font-family: FontAwesome;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+
+/*------------------------Popular Artists Section--------------------------------*/
+
+#popular-artists {
+        width: 100%;
+    }
+
+.artist-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-left: 20px;
+    }
+
+.artist {
+        width: 30%;
+        text-align: center;
+        margin: 0 10px;
+    }
+
+.artist img {
+        width: 130px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+.caption {
+        margin-top: 10px;
+        font-size: 14px;
+        font-family: var(--text-font);
+        color: var(--text-color);
+        font-weight: 900;
+    }
+
+.artist:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+/*------------------------------Aside Section -------------------------------------*/
+
+.aside-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+ margin-left: 150px;
+}
+
+.custom-dropdown label {
+  cursor: pointer;
+  padding: 5px;
+  background-color: transparent;
+  font-family: var(--text-font);
+  color: cyan;
+
+}
+
+.custom-dropdown input[type="checkbox"] {
+  display: none;
+}
+
+.custom-dropdown ul.options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: 1px solid #ccc;
+  background-color:hsl(0deg 0% 94.9%);;
+}
+
+.custom-dropdown ul.options li {
+  padding: 5px;
+    color: hsl(230.4deg 27.47% 17.84%);
+    font-family: var(--text-font);
+    font-size: 20px;
+
+}
+
+.custom-dropdown input[type="checkbox"]:checked ~ ul.options {
+  display: block;
+}
+
+
+/* playlist content */
+.playlist-content {
+  width: 100%;
+  height: 75vh;
+  /*     margin-top:4vh; */
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  cursor: pointer;
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 20px;
+
+}
+/* playlist content container scroll bar */
+.playlist-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* left content contains the image, index and name of the song */
+.left-item {
+  display: flex;
+  height: 100%;
+  width: 70%;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+  align-items: center;font-family: var(--text-font);
+  color: var(--text-color);
+}
+
+.left-item > div:nth-child(3) {
+  margin-left: 12px;
+  width: 50%;
+  word-wrap: break-word;
+}
+
+/* right content contains the heart icon */
+.right-item {
+  position: relative;
+  bottom: 62%;
+  left: 90%;
+  width: min-content;
+  height: 20px;
+  color: white;
+  font-size: 20px;
+}
+
+.right-item i {
+  transition: all ease-in-out 0.1s;
+}
+
+.right-item i:hover {
+  color: hotpink;
+}
+
+/* class for a partilcular item in playlist */
+.playlist-item {
+  width: 90%;
+  height: auto;
+  padding: 0px 1%;
+  box-sizing: border-box;
+  margin: 1%;
+}
+
+.playlist-item:hover {
+ box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+ transform: scale(1.1);
+}
+
+.playlist-item img {
+  width: 80px;
+  height: 80px;
+}
+
+/*----------------------------------- Footer ---------------------------------------*/
+
+#footer{
+    width:100%;
+    height:15vh;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    opacity:0;
+    background:hsl(0deg 0% 15.69%);
+
+}  
+#footer:target{
+    opacity:1;
+
+}
+
+.footer-content {
+  display: flex;
+  align-items: flex-start; /* Align items at the top */
+  margin: 15px;
+}
+
+.footer-img {
+  height: 10vh;
+  width: 100px;
+}
+
+.footer-text {
+  flex-grow: 1; /* Allow text to take up remaining horizontal space */
+}
+
+.footer-song-name {
+  margin: 15px;
+  height: 10vh;
+  width: 100px;
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+.footer-icon i {
+  margin: 10px;
+  font-size: 20px;
+  margin-left: 10px;
+  color: hsl(0deg 0% 56.47%);
+}
+
+.footer-audio {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-grow: 1; /* Allow audio to take up remaining space */
+ background-color: transparent;
+}
+
+/*--------------------------- Second Page ------------------------------------------*/
+
+/*------------------------------ station section ----------------------------------*/
+#station {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.station-container {
+    margin: 10px;
+    width: 100%;
+    height: 18vh;
+    background-color: hsl(232.8deg 60.98% 16.08%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#div1 {
+    width: 10vw;
+    height: 4vw;
+    background-color: hsl(47.86deg 93.51% 63.73%);
+}
+#div2 {
+    position: relative;
+    top: -1vw;
+    left: 1vw;
+    width: 8vw;
+    height: 6vw;
+    background-color: hsl(46.07deg 88.19% 50.2%);
+}
+#div3 {
+    position: relative;
+    top: -1vw;
+    left: 1vw;
+    width: 6vw;
+    height: 8vw;
+    background-color: hsl(16.9deg 100% 51.96%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#div3 img {
+    width: 5vw;
+    height: 4vw;
+    border-radius: 50%;
+}
+
+#div3 img:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 6px 4px darkgrey;
+}
+
+.station-img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-with-text {
+    position: relative;
+    text-align: center;
+}
+
+.image-with-text img {
+    width: 8vw;
+    height: 15vh;
+    margin: 0 8px;
+    border-radius: 50%;
+     opacity: 0.6;
+}
+
+
+
+.station-img-text {
+    color: var(--text-color);
+    background-color: transparent;
+    padding: 5px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--text-font);
+    font-weight: 900;
+}
+
+/*----------------------------------- Theme Section ------------------------------*/
+
+#theme-section{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+#theme-section div{
+    height: 30vh;
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+#theme-section div:hover{
+    transform: scale(1.1); /* Move the image down on hover */
+}
+
+.theme-text{
+font-family: var(--text-font);
+color: var(--text-color);
+font-size: 30px;
+font-weight: bold;
+text-align: center;
+margin: 60px 0px 60px 0px;
+}
+
+#party{
+background-image: url("images/party.png");
+}
+
+#electronic{
+   background-image: url("images/electronic.png");
+}
+
+#roadtrip{
+    background-image: url("images/roadtrip.png");
+}
+
+/*-------------------------------- English and Hindi Section ---------------------*/
+
+.english-container,
+.hindi-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-left: 20px;
+}
+
+.english-img,
+.hindi-img {
+  width: 30%;
+  text-align: left;
+  margin: 0 10px;
+}
+
+.english-img img,
+.hindi-img img {
+  width: 130px;
+  height: 100px;
+}
+
+.img-caption,
+.eng-text {
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-weight: 900;
+  text-align: left;
+}
+
+.english-img:hover,
+.hindi-img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
